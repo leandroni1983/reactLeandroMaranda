@@ -1,0 +1,14 @@
+.icon{
+    font-size: 25px;
+    color: white;
+    margin-right: 20px;
+}
+
+button {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+}

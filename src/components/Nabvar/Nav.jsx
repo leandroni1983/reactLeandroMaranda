@@ -1,9 +1,10 @@
 import React from 'react'
+import Form from './form'
 import Dropdown from './Dropdown'
-
+import CardWidget from '../CardWidget/CardWidget'
 export default function Nav() {
     return (
-        <div>
+        <>
             <div className="collapse navbar-collapse" id="navbarColor01">
                 <ul className="navbar-nav me-auto">
                     <li className="nav-item">
@@ -20,16 +21,11 @@ export default function Nav() {
                     <li className="nav-item">
                         <a className="nav-link" href="#">About</a>
                     </li>
-
                     <Dropdown />
-
                 </ul>
-                <form className="d-flex">
-                    <input className="form-control me-sm-2" type="text" placeholder="Search" />
-                    <button className="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-                </form>
-
+                <button><CardWidget /></button>
+                <Form name='Productos' />
             </div>
-        </div>
+        </>
     )
 }

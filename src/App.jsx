@@ -1,10 +1,12 @@
 import './App.css';
-import Navbar from './components/navbar/Navbar';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import Navbar from './components/Nabvar/Nabvar';
 function App() {
   return (
-    <div className="App">
+    <>
       <Navbar />
-    </div>
+      <ItemListContainer greeting='Hola React' />
+    </>
   );
 }
 
