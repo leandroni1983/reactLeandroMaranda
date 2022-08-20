@@ -5,7 +5,9 @@ function App() {
   return (
     <>
       <Navbar />
-      <ItemListContainer greeting='Hola React' />
+      <ItemListContainer greeting='Hola React' ready={true} />
+      <ItemListContainer greeting='Hola React' ready={false} />
+
     </>
   );
 }

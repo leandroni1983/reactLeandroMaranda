@@ -10,8 +10,15 @@
 }
 
 
-.cardlist h1{
-    color:red
+.yellow{
+    color:yellow
+}
+.red{
+    color: red
+}
+
+.green{
+    color: green
 }
 
 .cardlist img{
