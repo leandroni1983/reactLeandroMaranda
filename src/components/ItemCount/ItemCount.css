@@ -1,0 +1,22 @@
+.hijo{
+    padding-top: 2%;
+    margin: auto;
+}
+.card{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    width: 16rem;
+}
+
+.card img{
+    width: 150px;
+    margin: 10px;
+}
+
+.card button{
+  margin: 5px;
+  border-radius: 5px;
+  font-size: large;
+}

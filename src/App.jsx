@@ -1,12 +1,18 @@
 import './App.css';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemCount from './components/ItemCount/ItemCount';
+import ItemCountCustomHook from './components/ItemCount/ItemCountCustomHook';
 import Navbar from './components/Nabvar/Nabvar';
+
 function App() {
   return (
     <>
-      <Navbar />
-      <ItemListContainer greeting='Hola React' ready={true} />
-      <ItemListContainer greeting='Hola React' ready={false} />
+      <header>
+        <Navbar />
+      </header>
+      <body className='padre'>
+        <ItemCount nombre='cosa' stock={10} initial={1} />
+        <ItemCountCustomHook nombre='cosa' stock={20} initial={1} />
+      </body>
 
     </>
   );
