@@ -1,0 +1,45 @@
+.hijo{
+    display: flex;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+   width: 310px;
+   height: 310px;
+   border-radius: 10px;
+   box-shadow: 5px 5px 8px darkgray;
+   opacity: 0.85;
+}
+.card:hover{
+    opacity: 1;
+}
+
+.card-title{
+    font-size: 1rem;
+}
+.card-text{
+    font-size: 0.85rem;
+}
+.card img{
+    margin-top: 15px;
+    width:110px;
+    height:110px;
+}
+
+.botones{
+    display: flex;
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    gap: 10px;
+
+} 
+/* 
+.card button{
+    position:absolute;
+    bottom:5px;
+    right:10px;
+    border-radius: 5px;
+}  */

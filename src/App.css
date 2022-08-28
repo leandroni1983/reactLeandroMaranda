@@ -1,3 +1,10 @@
+#light{
+    background-color: aliceblue;
+}
+
+#dark{
+    background-color: blueviolet;
+}
 .App{
     display: flex;
 }

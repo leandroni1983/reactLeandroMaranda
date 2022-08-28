@@ -1,3 +1,9 @@
-.padre{
+.padre {
     display: flex;
+    padding-top: 15px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+
 }
