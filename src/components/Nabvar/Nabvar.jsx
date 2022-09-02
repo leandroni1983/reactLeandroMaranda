@@ -1,5 +1,4 @@
 import React from "react";
-import CardWidget from "../CardWidget/CardWidget";
 import Dropdown from "./Dropdown";
 import Form from "./Form";
 function Navbar() {
@@ -30,9 +29,6 @@ function Navbar() {
                             </li>
                             <Dropdown />
                         </ul>
-
-                        <CardWidget />
-
                         <Form name='Productos' />
                     </div>
                 </div>

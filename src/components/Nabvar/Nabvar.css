@@ -1,0 +1,10 @@
+.carticon{
+    font-size: 25px;
+    margin-right: 15px;
+    cursor:pointer;
+    opacity: 0.80;
+    }
+
+.carticon:hover{
+    opacity: 1;
+}

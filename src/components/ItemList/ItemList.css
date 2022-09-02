@@ -10,6 +10,7 @@
    height: 310px;
    border-radius: 10px;
    box-shadow: 5px 5px 8px darkgray;
+   background-color: transparent;
    opacity: 0.85;
 }
 .card:hover{

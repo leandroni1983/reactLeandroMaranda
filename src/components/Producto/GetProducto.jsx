@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import ItemList from './ItemList';
+import Producto from './Producto';
+import { useParams } from 'react-router-dom';
 
-
-const Item = () => {
+const GetProducto = () => {
 
     const [producto, setproducto] = useState([])
+    const { id } = useParams();
 
     useEffect(() => {
         const getdata = new Promise((res, rej) => {
-            res(fetch('https://fakestoreapi.com/products/'))
-            //res(fetch('https://api.escuelajs.co/api/v1/products'))
+            res(fetch(`https://fakestoreapi.com/products/${id}`))
 
         })
 
@@ -17,11 +17,12 @@ const Item = () => {
             .then(res => res.json())
             .then(json => setproducto(json))
             .catch((err) => console.error(err))
+
     }, [])
 
     return (
-        <ItemList producto={producto} />
+        <Producto producto={producto} />
     );
 }
 
-export default Item;
+export default GetProducto;
