@@ -15,7 +15,7 @@ function App() {
       <div className='padre' id='light'>
         <Routes>
           <Route path="/" element={<Item />} />
-          <Route path="/producto/category/:category" element={<Item />} />
+          <Route path="/category/:category" element={<Item />} />
           <Route path="/producto/:id" element={<GetProducto />} />
         </Routes>
       </div>

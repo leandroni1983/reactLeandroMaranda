@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Producto.css'
 const Producto = ({ producto }) => {
-    // const { id } = useParams();
 
     return (
         <>
