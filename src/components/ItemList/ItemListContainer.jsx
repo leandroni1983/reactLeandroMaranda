@@ -8,7 +8,7 @@ export default function PintarUser({ producto }) {
     const { sumarItem, count } = useItemCount()
     return (
         <>
-            <div className="card hijo" >
+            <div className="card cardcita hijo" >
 
                 <img src={producto.image} className="card-img-top" alt="Imagen Producto" />
                 <div className="card-body">

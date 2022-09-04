@@ -1,23 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import ItemList from './ItemList';
-
+import { useParams } from 'react-router-dom';
 
 const Item = () => {
-
-    const [producto, setproducto] = useState([])
-
+    //["electronics","jewelery","men's clothing","women's clothing"]
+    const [producto, setproducto] = useState([]);
+    const { category } = useParams();
+    console.log(category)
     useEffect(() => {
         const getdata = new Promise((res, rej) => {
-            res(fetch('https://fakestoreapi.com/products/'))
-            //res(fetch('https://api.escuelajs.co/api/v1/products'))
-
+            if (category) {
+                res(fetch(`https://fakestoreapi.com/products/category/${category}`))
+            } else {
+                res(fetch('https://fakestoreapi.com/products/'))
+            }
         })
 
         getdata
             .then(res => res.json())
             .then(json => setproducto(json))
             .catch((err) => console.error(err))
-    }, [])
+
+    }, [category])
 
     return (
         <ItemList producto={producto} />

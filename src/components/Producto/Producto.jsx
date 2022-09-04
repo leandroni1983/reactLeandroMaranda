@@ -1,19 +1,28 @@
 import React from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import './Producto.css'
 const Producto = ({ producto }) => {
-    const { id } = useParams();
+    // const { id } = useParams();
 
     return (
         <>
-            <div>
-                <h1>producto id: {id}</h1>
-                <h2>{producto.title}</h2>
-                <h2>{producto.price}</h2>
-                <h3>{producto.category}</h3>
-                <h4>{producto.description}</h4>
-                <img src={producto.image} alt="" style={{ width: '10rem' }} />
-                <Link to="/"> <button className='btn btn-success'>Home</button> </Link>
+            <div className="card">
+                <h5 className="card-header">{producto.title}</h5>
+                <div className="card-body itemcard">
+                    <div>
+                        <img src={producto.image} alt={producto.title} />
+                    </div>
+                    <div>
+                        <h4 className="card-title">Descripcion</h4>
+                        <p className="card-text">{producto.description}</p>
+                        <h5 className="card-title">Precio ${producto.price}</h5>
+                        <Link to="/"> <button className='btn btn-success'>Volver</button> </Link>
+                    </div>
+
+
+                </div>
             </div>
+
         </>
     );
 }

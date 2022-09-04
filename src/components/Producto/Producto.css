@@ -1,0 +1,13 @@
+.itemcard{
+    display: flex;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.itemcard img{
+    width: 350px;
+    height: 350px;
+    border: solid grey 1px;
+}

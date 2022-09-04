@@ -1,16 +1,18 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 export default function Dropdown() {
+    //["electronics","jewelery","men's clothing","women's clothing"]
     return (
         <>
             <li className="nav-item dropdown">
-                <a className="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                <a className="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Productos</a>
                 <div className="dropdown-menu">
-                    <a className="dropdown-item" href="#">Action</a>
-                    <a className="dropdown-item" href="#">Another action</a>
-                    <a className="dropdown-item" href="#">Something else here</a>
+                    <Link className="dropdown-item" to="/producto/category/electronics">Electronica</Link>
+                    <Link className="dropdown-item" to="/producto/category/jewelery">jewelery</Link>
+                    <Link className="dropdown-item" to="/producto/category/men's clothing">men's clothing</Link>
+                    <Link className="dropdown-item" to="/producto/category/women's clothing">women's clothing</Link>
                     <div className="dropdown-divider" />
-                    <a className="dropdown-item" href="#">Separated link</a>
+                    <Link className="dropdown-item" to="/">Todo</Link>
                 </div>
             </li>
         </>
