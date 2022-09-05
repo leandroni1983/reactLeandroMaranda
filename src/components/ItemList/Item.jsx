@@ -6,7 +6,7 @@ const Item = () => {
     //["electronics","jewelery","men's clothing","women's clothing"]
     const [producto, setproducto] = useState([]);
     const { category } = useParams();
-    console.log(category)
+
     useEffect(() => {
         const getdata = new Promise((res, rej) => {
             if (category) {
