@@ -5,7 +5,7 @@ import './Producto.css'
 import { BsCartFill } from 'react-icons/bs'
 import useItemCount from '../../hooks/useItemCount';
 const Producto = ({ producto }) => {
-    const { title, image, description, price, category } = producto
+    const { title, image, description, price, category, rating } = producto
     const { sumarItem, count } = useItemCount()
     return (
         <>
@@ -19,8 +19,6 @@ const Producto = ({ producto }) => {
                         <h4 className="card-title">Descripcion</h4>
                         <p className="card-text">{description}</p>
                         <h5 className="card-title">Precio ${price}</h5>
-                        {/* <h5 className="card-title">Rate{producto?.rating?.rate}</h5> */}
-
                         <div className='botones'>
                             <Link to="/" className='btn btn-success'> Volver al Home</Link>
                             <Link to={`/category/${category}`} className='btn btn-success'>Mas de {category}</Link>

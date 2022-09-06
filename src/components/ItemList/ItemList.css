@@ -1,6 +1,6 @@
 .hijo{
     display: flex;
-    margin: 10px;
+    margin: 5px;
     align-items: center;
     justify-content: center;
 }
@@ -8,9 +8,9 @@
 .cardcita{
    width: 310px;
    height: 310px;
-   border-radius: 10px;
+   /* border-radius: 10px; */
    box-shadow: 5px 5px 8px darkgray;
-   background-color: transparent;
+   /* background-color: transparent; */
    opacity: 0.85;
 }
 .card:hover{
