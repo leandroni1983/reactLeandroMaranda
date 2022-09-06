@@ -1,12 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Producto.css'
-
-import { BsCartFill } from 'react-icons/bs'
-import useItemCount from '../../hooks/useItemCount';
+import AgregarCarro from '../AgregarCarro/AgregarCarro';
 const Producto = ({ producto }) => {
     const { title, image, description, price, category, rating } = producto
-    const { sumarItem, count } = useItemCount()
     return (
         <>
             <div className="card">
@@ -24,13 +21,7 @@ const Producto = ({ producto }) => {
                             <Link to="/" className='btn btn-success'> Volver al Home</Link>
                             <Link to={`/category/${category}`} className='btn btn-success'>Mas de {category}</Link>
                         </div>
-
-                        <div className='botones2'>
-                            <button className='btn btn-primary' onClick={() => sumarItem(true)}>+</button>
-                            <p>{count}</p>
-                            <button className='btn btn-primary' onClick={() => sumarItem(false)}>-</button>
-                            <button className='btn btn-primary'>Agregar  <BsCartFill /></button>
-                        </div>
+                        <AgregarCarro />
                     </div>
 
 
