@@ -37,6 +37,12 @@
     gap: 10px;
 
 } 
+.botones2{
+    display: flex;
+    position: absolute;
+    gap: 10px;
+
+} 
 /* 
 .card button{
     position:absolute;

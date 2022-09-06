@@ -19,9 +19,13 @@ const Producto = ({ producto }) => {
                         <h4 className="card-title">Descripcion</h4>
                         <p className="card-text">{description}</p>
                         <h5 className="card-title">Precio ${price}</h5>
+
                         <div className='botones'>
                             <Link to="/" className='btn btn-success'> Volver al Home</Link>
                             <Link to={`/category/${category}`} className='btn btn-success'>Mas de {category}</Link>
+                        </div>
+
+                        <div className='botones2'>
                             <button className='btn btn-primary' onClick={() => sumarItem(true)}>+</button>
                             <p>{count}</p>
                             <button className='btn btn-primary' onClick={() => sumarItem(false)}>-</button>

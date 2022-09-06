@@ -12,8 +12,6 @@ const useItemCount = (stock = 10, initial = 0) => {
         }
     }
 
-
-
     const resetItems = () => {
         setCount(1)
     }
