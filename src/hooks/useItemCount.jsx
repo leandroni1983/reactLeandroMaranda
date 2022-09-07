@@ -16,8 +16,14 @@ const useItemCount = (stock = 10, initial = 0) => {
         setCount(1)
     }
 
+    const agregarCarrito = (count, producto) => {
+        const carrito = { 'ID': producto.id, 'cantidad': count }
+        console.log(carrito)
+    }
+
+
     return {
-        count, sumarItem, resetItems
+        count, sumarItem, resetItems, agregarCarrito
     }
 }
 

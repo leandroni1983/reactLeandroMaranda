@@ -11,7 +11,7 @@ export default function Dropdown() {
                     <Link className="dropdown-item" to="/category/jewelery">Joyeria</Link>
                     <Link className="dropdown-item" to="/category/electronics">Electronica</Link>
                     <div className="dropdown-divider" />
-                    <Link className="dropdown-item" to="/">Todo</Link>
+                    <Link className="dropdown-item" to="/products">Todo</Link>
                 </div>
             </li>
         </>

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function Navbar() {
 
     return (
-        <div>
+        <>
             <nav className='navbar navbar-expand-lg navbar-dark bg-primary'>
                 {/* //<Link className="dropdown-item" to="/">Todo</Link> */}
                 <div className="container-fluid">
@@ -34,7 +34,7 @@ function Navbar() {
                     </div>
                 </div>
             </nav>
-        </div>
+        </>
     );
 }
 

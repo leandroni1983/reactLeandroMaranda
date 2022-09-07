@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Producto.css'
 import AgregarCarro from '../AgregarCarro/AgregarCarro';
 const Producto = ({ producto }) => {
-    const { title, image, description, price, category, rating } = producto
+    const { title, image, description, price, category } = producto
     return (
         <>
             <div className="card">
@@ -21,7 +21,7 @@ const Producto = ({ producto }) => {
                             <Link to="/" className='btn btn-success'> Volver al Home</Link>
                             <Link to={`/category/${category}`} className='btn btn-success'>Mas de {category}</Link>
                         </div>
-                        <AgregarCarro />
+                        <AgregarCarro producto={producto} />
                     </div>
 
 

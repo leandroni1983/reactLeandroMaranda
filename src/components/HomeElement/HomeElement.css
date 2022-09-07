@@ -1,0 +1,42 @@
+
+.carousel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+.carousel-item {
+height: 65vh;
+min-height: 300px;
+background: no-repeat center center scroll;
+
+}
+
+
+.container {
+    display: flex;
+    padding: 0 55px;
+}
+ 
+.item {
+background: white;
+flex: 0 0 19.7%;
+text-align: center;
+margin: 0 2px;
+transition: transform 300ms ease 100ms;
+}
+
+/* 
+.container:hover .item {
+transform: translateX(-25%);
+} */
+
+.item:hover ~ .item {
+    transform: translateX(25%);
+}
+
+
+.item:hover {
+transform: scale(1.5) !important;
+}  

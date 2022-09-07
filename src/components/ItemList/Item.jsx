@@ -9,7 +9,6 @@ const style = { position: "fixed", top: "50%", left: "50%", transform: "translat
 
 
 const Item = () => {
-    //["electronics","jewelery","men's clothing","women's clothing"]
     const [producto, setproducto] = useState([]);
     const { category } = useParams();
     const [isLoading, setIsLoading] = useState(true)
