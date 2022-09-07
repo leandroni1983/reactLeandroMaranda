@@ -1,11 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Producto from './Producto';
 import { useParams } from 'react-router-dom';
-import ClipLoader from "react-spinners/ClipLoader";
-
-
-const style = { position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)", padding: '60px' };
-
+import Loader from '../Loader/Loader';
 
 const GetProducto = () => {
     const [producto, setproducto] = useState([])
@@ -25,7 +21,7 @@ const GetProducto = () => {
     }, [])
 
     return (
-        isLoading ? <ClipLoader color="rgba(52,89,230)" cssOverride={style} /> : <Producto producto={producto} />
+        isLoading ? <Loader /> : <Producto producto={producto} />
     );
 }
 export default GetProducto;

@@ -14,29 +14,20 @@ background: no-repeat center center scroll;
 }
 
 
-.container {
+.container-fluid {
     display: flex;
-    padding: 0 55px;
-}
- 
-.item {
-background: white;
-flex: 0 0 19.7%;
-text-align: center;
-margin: 0 2px;
-transition: transform 300ms ease 100ms;
+    flex-wrap: wrap;
+    padding: auto;
+    justify-content: center;
+    gap: 15px;
 }
 
-/* 
-.container:hover .item {
-transform: translateX(-25%);
-} */
 
-.item:hover ~ .item {
-    transform: translateX(25%);
+.item{
+    text-align: center;
 }
-
 
 .item:hover {
-transform: scale(1.5) !important;
-}  
+    transform: scale(1.5) !important;
+    z-index: 1;
+    } 

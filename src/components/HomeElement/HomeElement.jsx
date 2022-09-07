@@ -26,7 +26,7 @@ const HomeElement = () => {
                         <span className="visually-hidden">Next</span>
                     </button>
                 </div>
-                <div className='container'>
+                <div className='container-fluid'>
                     <Slide />
                 </div>
             </div>

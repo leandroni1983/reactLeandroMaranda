@@ -1,13 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ItemList from './ItemList';
 import { useParams } from 'react-router-dom';
-import ClipLoader from "react-spinners/ClipLoader";
-
-
-
-const style = { position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)", padding: '60px' };
-
-
+import Loader from '../Loader/Loader';
 const Item = () => {
     const [producto, setproducto] = useState([]);
     const { category } = useParams();
@@ -32,7 +26,7 @@ const Item = () => {
     }, [category])
 
     return (
-        isLoading ? <ClipLoader color="rgba(52,89,230)" cssOverride={style} /> : <ItemList producto={producto} />
+        isLoading ? <Loader /> : <ItemList producto={producto} />
     );
 }
 
