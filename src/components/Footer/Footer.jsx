@@ -14,22 +14,22 @@ const Footer = () => {
                     {/* Left */}
                     {/* Right */}
                     <div>
-                        <a href className="me-4 text-reset">
+                        <a className="me-4 text-reset">
                             <i className="fab fa-facebook-f" />
                         </a>
-                        <a href className="me-4 text-reset">
+                        <a className="me-4 text-reset">
                             <i className="fab fa-twitter" />
                         </a>
-                        <a href className="me-4 text-reset">
+                        <a className="me-4 text-reset">
                             <i className="fab fa-google" />
                         </a>
-                        <a href className="me-4 text-reset">
+                        <a className="me-4 text-reset">
                             <i className="fab fa-instagram" />
                         </a>
-                        <a href className="me-4 text-reset">
+                        <a className="me-4 text-reset">
                             <i className="fab fa-linkedin" />
                         </a>
-                        <a href className="me-4 text-reset">
+                        <a className="me-4 text-reset">
                             <i className="fab fa-github" />
                         </a>
                     </div>
@@ -37,7 +37,7 @@ const Footer = () => {
                 </section>
                 {/* Section: Social media */}
                 {/* Section: Links  */}
-                <section className>
+                <section >
                     <div className="container text-center text-md-start mt-5">
                         {/* Grid row */}
                         <div className="row mt-3">
@@ -60,16 +60,16 @@ const Footer = () => {
                                     Products
                                 </h6>
                                 <p>
-                                    <a href="#!" className="text-reset">Angular</a>
+                                    <a className="text-reset">Angular</a>
                                 </p>
                                 <p>
-                                    <a href="#!" className="text-reset">React</a>
+                                    <a className="text-reset">React</a>
                                 </p>
                                 <p>
-                                    <a href="#!" className="text-reset">Vue</a>
+                                    <a className="text-reset">Vue</a>
                                 </p>
                                 <p>
-                                    <a href="#!" className="text-reset">Laravel</a>
+                                    <a className="text-reset">Laravel</a>
                                 </p>
                             </div>
                             {/* Grid column */}
@@ -80,16 +80,16 @@ const Footer = () => {
                                     Useful links
                                 </h6>
                                 <p>
-                                    <a href="#!" className="text-reset">Pricing</a>
+                                    <a className="text-reset">Pricing</a>
                                 </p>
                                 <p>
-                                    <a href="#!" className="text-reset">Settings</a>
+                                    <a className="text-reset">Settings</a>
                                 </p>
                                 <p>
-                                    <a href="#!" className="text-reset">Orders</a>
+                                    <a className="text-reset">Orders</a>
                                 </p>
                                 <p>
-                                    <a href="#!" className="text-reset">Help</a>
+                                    <a className="text-reset">Help</a>
                                 </p>
                             </div>
                             {/* Grid column */}
