@@ -41,5 +41,11 @@
     display: flex;
     position: absolute;
     gap: 10px;
-
-} 
+    background-color: black;
+    border-radius: 15px;
+}
+.botones2 button{
+   color: white;
+   border: transparent;
+}
+ 

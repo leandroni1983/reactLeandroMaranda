@@ -8,3 +8,22 @@
 .carticon:hover{
     opacity: 1;
 }
+
+.lupa{
+    font-size: 25px;
+    color: black;
+    cursor:pointer;
+}
+.lupa:hover{
+    opacity: 0.80;
+}
+
+.navbar .navbar-nav .nav-link {
+    font-size: 12px;
+    font-family: sans-serif;
+}
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

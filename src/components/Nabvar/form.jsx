@@ -1,13 +1,18 @@
 import React from 'react';
 import './Nabvar.css'
-import { GrCart } from 'react-icons/gr';
+import { HiSearchCircle } from 'react-icons/hi';
 const Form = ({ name }) => {
     return (
         <>
-            <div className='carticon'><GrCart /></div>
             <form className="d-flex">
-                <input className="form-control me-sm-2" type="text" placeholder={name} />
-                <button className="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                <div className="input-group input-group-sm mb-3">
+                    <input type="text" style={{ width: '500px' }} className="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder='Buscar Productos, Marcas y mas ...' />
+                    <div className="input-group-prepend">
+                        <span className="input-group-text" id="inputGroup-sizing-sm">  <HiSearchCircle className='lupa' /></span>
+                    </div>
+                </div>
+
+
             </form>
         </>
 

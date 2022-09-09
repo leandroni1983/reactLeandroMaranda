@@ -1,5 +1,5 @@
 import React from 'react'
-import Slide from './Slide'
+
 export default function Slide2({ producto }) {
     return (
         <div >

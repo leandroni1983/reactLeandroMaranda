@@ -18,8 +18,8 @@ const Producto = ({ producto }) => {
                         <h5 className="card-title">Precio ${price}</h5>
 
                         <div className='botones'>
-                            <Link to="/" className='btn btn-success'> Volver al Home</Link>
-                            <Link to={`/category/${category}`} className='btn btn-success'>Mas de {category}</Link>
+                            <Link to="/" className='btn'> Volver al Home</Link>
+                            <Link to={`/category/${category}`} className='btn'>Mas de {category}</Link>
                         </div>
                         <AgregarCarro producto={producto} />
                     </div>
