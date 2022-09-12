@@ -6,28 +6,32 @@ import { Routes, Route } from "react-router-dom";
 import GetProducto from './components/Producto/GetProducto';
 import Footer from './components/Footer/Footer';
 import HomeElement from './components/HomeElement/HomeElement'
-import Cart from './components/Cart/Cart';
+import Carrito from './components/Cart/Carrito';
+import CartProvider from './components/context/CartContext';
 function App() {
 
 
   return (
     <>
-      <header>
-        <Navbar />
-      </header>
-      <Routes>
-        <Route path="/" element={<HomeElement />} />
-      </Routes>
-      <div className='padre'>
+      <CartProvider>
+        <header>
+          <Navbar />
+        </header>
         <Routes>
-          <Route path='/cart' element={<Cart />} />
-          <Route path="/products" element={<Item />} />
-          <Route path="/category/:category" element={<Item />} />
-          <Route path="/producto/:id" element={<GetProducto />} />
+          <Route path="/" element={<HomeElement />} />
+          <Route path='/cart' element={<Carrito />} />
         </Routes>
-      </div>
-      <Footer />
+        <div className='padre'>
+          <Routes>
+            <Route path="/products" element={<Item />} />
+            <Route path="/category/:category" element={<Item />} />
+            <Route path="/producto/:id" element={<GetProducto />} />
+          </Routes>
+        </div>
+        <Footer />
+      </CartProvider >
     </>
+
   );
 }
 

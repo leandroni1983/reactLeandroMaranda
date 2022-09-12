@@ -3,8 +3,10 @@ import Dropdown from "./Dropdown";
 import Form from "./Form";
 import { Link } from "react-router-dom";
 import './Nabvar.css'
+import { AiOutlineShoppingCart } from "react-icons/ai";
+import { useCartContext } from '../context/CartContext';
 function Navbar() {
-
+    const { carro, getTotalProds } = useCartContext();
     return (
         <>
             <nav className='navbar navbar-expand-lg navbar-dark bg-primary padre'>
@@ -32,6 +34,12 @@ function Navbar() {
                                     <a className="nav-link" href="#">About</a>
                                 </li>
                                 <Dropdown />
+                                <span type="button" className="position-relative">
+                                    <Link to='/cart'> <AiOutlineShoppingCart className="carticon " /></Link>
+                                    <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                        {getTotalProds()}
+                                    </span>
+                                </span>
                             </ul>
                         </div>
                     </div>

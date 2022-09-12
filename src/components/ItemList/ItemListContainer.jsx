@@ -13,7 +13,7 @@ export default function PintarUser({ producto }) {
                     <p className="card-text"> Precio $ {producto.price}</p>
                     <p className="card-text">Rating {producto.rating.rate}</p>
                     <div className='botones'>
-                        <Link to={`/producto/${producto.id}`}><button className='btn btn-primary btn-sm'>Mas Info</button></Link>
+                        <Link to={`/producto/${producto.id}`}><button className='btn btn-dark btn-sm'>Detalle</button></Link>
                     </div>
                 </div >
             </div >

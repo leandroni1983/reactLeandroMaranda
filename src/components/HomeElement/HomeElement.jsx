@@ -26,6 +26,11 @@ const HomeElement = () => {
                         <span className="visually-hidden">Next</span>
                     </button>
                 </div>
+                <div className='container-fluid m-5'>
+                    <img src="https://imgmp.mlstatic.com/org-img/banners/ar/medios/online/785X40.jpg"
+                        title="Mercado Pago - Medios de pago" alt="Mercado Pago - Medios de pago"
+                        width="785" height="40" />
+                </div>
                 <div className='container-fluid'>
                     <Slide />
                 </div>

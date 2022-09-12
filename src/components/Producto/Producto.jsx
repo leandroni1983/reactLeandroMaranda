@@ -16,12 +16,13 @@ const Producto = ({ producto }) => {
                         <h4 className="card-title">Descripcion</h4>
                         <p className="card-text">{description}</p>
                         <h5 className="card-title">Precio ${price}</h5>
-
                         <div className='botones'>
-                            <Link to="/" className='btn'> Volver al Home</Link>
-                            <Link to={`/category/${category}`} className='btn'>Mas de {category}</Link>
+                            <Link to="/" className="btn btn-link"> Volver al Home</Link>
+                            <Link to={`/category/${category}`} className="btn btn-link">Mas de {category}</Link>
                         </div>
-                        <AgregarCarro producto={producto} />
+                        <div className='botones2'>
+                            <AgregarCarro producto={producto} />
+                        </div>
                     </div>
 
 
