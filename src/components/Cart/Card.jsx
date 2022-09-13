@@ -1,7 +1,7 @@
 import React from 'react';
 import { useCartContext } from '../context/CartContext'
 function Card({ producto }) {
-    const { carro, addProduct, getTotalProds, tocarrito, deleteProduct } = useCartContext()
+    const { deleteProduct } = useCartContext()
 
     return (
         <li className="list-group-item d-flex justify-content-between lh-sm">

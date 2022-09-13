@@ -39,7 +39,7 @@
 .botones2{
     display: flex;
     position: absolute;
-    gap: 2px;
+    gap: 5px;
    
 }
 .botones2 .btn{

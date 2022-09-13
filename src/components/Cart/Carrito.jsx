@@ -1,9 +1,8 @@
 import React from 'react';
-import { useCartContext } from '../context/CartContext'
 import CheckOut from './CheckOut';
 import MediosPagos from './MediosPagos';
 const Carrito = () => {
-    const { totalPrice } = useCartContext()
+
     return (
         <>
             <div className='container m-2'>

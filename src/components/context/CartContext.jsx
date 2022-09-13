@@ -1,15 +1,9 @@
-import { func } from 'prop-types';
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { isCompositeComponent } from 'react-dom/test-utils';
-import Carrito from '../Cart/Carrito';
-
 export const CartContext = createContext()
-
 export const useCartContext = () => useContext(CartContext);
 function CartProvider({ children }) {
     const [carro, setCarro] = useState([])
     const [tocarrito, setTocarrito] = useState(true)
-
 
     const addProduct = (count, producto) => {
         const foundProduct = carro.find((item) => item.id === producto.id)
@@ -20,15 +14,16 @@ function CartProvider({ children }) {
             setTocarrito(false)
         }
     }
+
     const getTotalProds = () => {
-        return carro.reduce((acc, curr) => acc + curr.cantidad, 0);
+        const totalItems = carro.reduce((acc, curr) => acc + curr.cantidad, 0);
+        return totalItems
+
     };
 
 
     const deleteProduct = (prodid) => {
-        const filterArray = carro.filter(
-            (prod) => prod.id !== prodid
-        );
+        const filterArray = carro.filter((prod) => prod.id !== prodid);
         setCarro(filterArray)
 
     }
@@ -37,8 +32,18 @@ function CartProvider({ children }) {
         return carro.reduce((acc, curr) => acc + (curr.precio * curr.cantidad), 0);
     }
 
+    const clearCarro = () => {
+        setCarro([]);
+    }
+
+    useEffect(() => {
+        (carro.length === 0 && setTocarrito(true))
+        // (carro.length != 0 && setCarro([...carro]))
+
+    }, [carro]);
+
     return (
-        <CartContext.Provider value={{ carro, addProduct, getTotalProds, tocarrito, deleteProduct, totalPrice }}>
+        <CartContext.Provider value={{ carro, addProduct, getTotalProds, tocarrito, deleteProduct, totalPrice, clearCarro }}>
             {children}
         </CartContext.Provider>
     )
