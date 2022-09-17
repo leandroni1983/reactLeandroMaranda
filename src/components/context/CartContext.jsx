@@ -1,17 +1,22 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
+
 export const CartContext = createContext()
 export const useCartContext = () => useContext(CartContext);
+
 function CartProvider({ children }) {
     const [carro, setCarro] = useState([])
     const [tocarrito, setTocarrito] = useState(true)
+    const [estado, setEstado] = useState(true)
+
 
     const addProduct = (count, producto) => {
         const foundProduct = carro.find((item) => item.id === producto.id)
         if (foundProduct) {
-            foundProduct.cantidad++;
+            foundProduct.cantidad = foundProduct.cantidad + count;
         } else {
             setCarro([...carro, { 'id': producto.id, 'cantidad': count, "title": producto.title, 'image': producto.image, 'precio': producto.price }])
             setTocarrito(false)
+            setEstado(false)
         }
     }
 
@@ -43,7 +48,7 @@ function CartProvider({ children }) {
     }, [carro]);
 
     return (
-        <CartContext.Provider value={{ carro, addProduct, getTotalProds, tocarrito, deleteProduct, totalPrice, clearCarro }}>
+        <CartContext.Provider value={{ estado, setEstado, carro, addProduct, getTotalProds, tocarrito, deleteProduct, totalPrice, clearCarro }}>
             {children}
         </CartContext.Provider>
     )

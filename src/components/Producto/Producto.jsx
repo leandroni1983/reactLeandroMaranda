@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Producto.css'
 import AgregarCarro from '../AgregarCarro/AgregarCarro';
 const Producto = ({ producto }) => {
     const { title, image, description, price, category } = producto
+
     return (
         <>
             <div className="card">
