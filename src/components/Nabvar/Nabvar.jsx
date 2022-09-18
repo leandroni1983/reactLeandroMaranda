@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Dropdown from "./Dropdown";
 import Form from "./Form";
 import { Link } from "react-router-dom";
@@ -7,6 +7,7 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import { useCartContext } from '../context/CartContext';
 function Navbar() {
     const { getTotalProds, tocarrito } = useCartContext();
+
     return (
         <>
             <nav className='navbar navbar-expand-lg navbar-dark bg-primary padre'>

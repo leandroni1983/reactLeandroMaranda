@@ -13,6 +13,8 @@ function CartProvider({ children }) {
         const foundProduct = carro.find((item) => item.id === producto.id)
         if (foundProduct) {
             foundProduct.cantidad = foundProduct.cantidad + count;
+            setCarro([...carro])
+            setEstado(false)
         } else {
             setCarro([...carro, { 'id': producto.id, 'cantidad': count, "title": producto.title, 'image': producto.image, 'precio': producto.price }])
             setTocarrito(false)

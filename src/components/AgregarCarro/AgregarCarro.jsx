@@ -17,17 +17,5 @@ export default function AgregarCarro({ producto }) {
             </>
             : <> <Link className='btn btn-dark' to='/cart'>Ver Carrito <BsCartFill /></Link></>}
         </>
-
-
-
-        // <div>
-        //     <button className='btn btn-dark' onClick={() => sumarItem(true)}>+</button>
-        //     <button className='btn btn-dark'>{count}</button>
-        //     <button className='btn btn-dark' onClick={() => sumarItem(false)}>-</button>
-        //     <button className='btn btn-dark' onClick={() => addProduct(count, producto)}>Agregar  <BsCartFill /></button>
-        //     <Link className='btn btn-dark' to='/cart'>Ver Carrito <BsCartFill /></Link>
-        // </div>
-
-
     )
 }
