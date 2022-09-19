@@ -5,11 +5,11 @@ import { Link } from 'react-router-dom'
 import { useCartContext } from '../context/CartContext'
 
 export default function AgregarCarro({ producto }) {
-    const { addProduct, estado } = useCartContext()
+    const { addProduct, estadoCarro } = useCartContext()
     const { sumarItem, count } = useItemCount()
 
     return (
-        <>{estado
+        <>{estadoCarro
             ? <><button className='btn btn-dark' onClick={() => sumarItem(true)}>+</button>
                 <button className='btn btn-dark'>{count}</button>
                 <button className='btn btn-dark' onClick={() => sumarItem(false)}>-</button>

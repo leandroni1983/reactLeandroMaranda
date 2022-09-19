@@ -6,7 +6,7 @@ export const useCartContext = () => useContext(CartContext);
 function CartProvider({ children }) {
     const [carro, setCarro] = useState([])
     const [tocarrito, setTocarrito] = useState(true)
-    const [estado, setEstado] = useState(true)
+    const [estadoCarro, setEstadoCarro] = useState(true)
 
 
     const addProduct = (count, producto) => {
@@ -14,11 +14,11 @@ function CartProvider({ children }) {
         if (foundProduct) {
             foundProduct.cantidad = foundProduct.cantidad + count;
             setCarro([...carro])
-            setEstado(false)
+            setEstadoCarro(false)
         } else {
             setCarro([...carro, { 'id': producto.id, 'cantidad': count, "title": producto.title, 'image': producto.image, 'precio': producto.price }])
             setTocarrito(false)
-            setEstado(false)
+            setEstadoCarro(false)
         }
     }
 
@@ -36,7 +36,7 @@ function CartProvider({ children }) {
     }
 
     const totalPrice = () => {
-        return carro.reduce((acc, curr) => acc + (curr.precio * curr.cantidad), 0);
+        return Number.parseFloat(carro.reduce((acc, curr) => acc + (curr.precio * curr.cantidad), 0)).toFixed(2);
     }
 
     const clearCarro = () => {
@@ -45,12 +45,10 @@ function CartProvider({ children }) {
 
     useEffect(() => {
         (carro.length === 0 && setTocarrito(true))
-        // (carro.length != 0 && setCarro([...carro]))
-
     }, [carro]);
 
     return (
-        <CartContext.Provider value={{ estado, setEstado, carro, addProduct, getTotalProds, tocarrito, deleteProduct, totalPrice, clearCarro }}>
+        <CartContext.Provider value={{ estadoCarro, setEstadoCarro, carro, addProduct, getTotalProds, tocarrito, deleteProduct, totalPrice, clearCarro }}>
             {children}
         </CartContext.Provider>
     )
