@@ -15,7 +15,6 @@ const Item = () => {
         const colRef = collection(db, 'productos')
         const colData = []
         if (category) {
-            console.log(category)
             getDocs(colRef)
                 .then((collection) => {
                     collection.docs.map((prod) => {

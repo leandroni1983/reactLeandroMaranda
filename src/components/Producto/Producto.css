@@ -7,7 +7,7 @@
 }
 
 .itemcard img{
-    width: 350px;
-    height: 350px;
+    width: 350px !important;
+    height: 350px !important;
     border: solid grey 1px;
 }
