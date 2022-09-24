@@ -1,19 +1,22 @@
 import React, { useState } from 'react';
 import { useCartContext } from '../context/CartContext';
 import { addDoc, collection } from "firebase/firestore";
-import { db } from '../firebase'
+import { db } from '../firebase';
 import swal from 'sweetalert';
-const MediosPagos = () => {
+import { useNavigate } from 'react-router-dom';
 
+const MediosPagos = () => {
     const { carro, totalPrice, clearCarro } = useCartContext()
     const [buyer, setbuyer] = useState({})
+    const navigate = useNavigate()
     const [orderId, setOrderId] = useState()
 
-    const compraRealizada = (orderid) => {
+    const compraAlerta = (text, title, icon) => {
         swal({
-            title: 'Compra Realizada ',
-            text: `${buyer.nombre} tu compra id: ${orderid} se realizo con exito`,
-            icon: 'success',
+            title: `${title}`,
+            // text: `${buyer.nombre} tu compra id: ${prop} se realizo con exito`,
+            text: `${text}`,
+            icon: `${icon}`,
             button: 'Aceptar'
         })
     }
@@ -24,12 +27,12 @@ const MediosPagos = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        if (Object.keys(buyer).length === 0 || carro.length === 0) {
-            console.log('fijate papu algo te falta')
+        if (Object.keys(buyer).length < 4 || carro.length === 0) {
+            compraAlerta('Faltan datos, chequee su carrito y datos personales', 'Datos incompletos', 'warning')
         } else {
             addDataToBdd()
-            compraRealizada(orderId)
             clearCarro()
+            navigate('/')
         }
     }
 
@@ -40,15 +43,16 @@ const MediosPagos = () => {
             precioTotal: `$${totalPrice()}`,
             fecha: new Date(),
             items: carro.map(prod => { return { 'cantidad': prod.cantidad, 'id': prod.id, 'title': prod.title, 'precio': prod.precio } })
+
         });
-        console.log(order.id)
-        setOrderId(order.id)
-        console.log(orderId)
+        //setOrderId(order.id)
+        //console.log(orderId)
+        compraAlerta(`${buyer.nombre} tu compra fue realizada con exito id: ${order.id}`, 'Compra realizada con exito', 'success')
+
     }
 
     return (
         <>
-
             <div className="col order-md-1">
                 <h4 className="mb-3">Billing address</h4>
                 <form className="needs-validation" noValidate onSubmit={handleSubmit}>
