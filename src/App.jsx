@@ -17,12 +17,10 @@ function App() {
         <header>
           <Navbar />
         </header>
-        <Routes>
-          <Route path="/" element={<HomeElement />} />
-          <Route path='/cart' element={<Carrito />} />
-        </Routes>
         <div className='padre'>
           <Routes>
+            <Route path="/" element={<HomeElement />} />
+            <Route path='/cart' element={<Carrito />} />
             <Route path="/products" element={<Item />} />
             <Route path="/category/:category" element={<Item />} />
             <Route path="/producto/:id" element={<GetProducto />} />

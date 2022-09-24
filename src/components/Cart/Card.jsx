@@ -13,6 +13,7 @@ function Card({ producto }) {
             </div>
 
             <div className='botones3'>
+
                 <button className='btn btn-danger btn-sm' onClick={() => deleteProduct(producto.id)}>Remover</button>
             </div>
         </li >

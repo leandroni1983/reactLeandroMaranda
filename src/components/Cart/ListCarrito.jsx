@@ -13,7 +13,7 @@ export default function ListCarrito() {
                     : carro.map(producto => <Card key={producto.id} producto={producto} />)
                 }
                 {tocarrito
-                    ? <>  <Link to="/products"> <button className='btn btn-primary btn-sm' style={{ width: '100%' }}>Carrito Vacio ver Productos</button></Link></>
+                    ? <><Link to="/products"> <button className='btn btn-primary btn-sm' style={{ width: '100%' }}>Carrito Vacio ver Productos</button></Link></>
                     : <li className="list-group-item d-flex justify-content-between">
                         <span>Total (ARS)</span>
                         <strong>${totalPrice()}</strong>

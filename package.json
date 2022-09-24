@@ -18,6 +18,8 @@
     "react-scripts": "^5.0.1",
     "react-spinners": "^0.13.4",
     "react-switch": "^7.0.0",
+    "sweetalert": "^2.1.2",
+    "sweetalert2": "^11.4.33",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
