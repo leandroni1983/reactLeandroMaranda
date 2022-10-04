@@ -1,7 +1,7 @@
 import './Nabvar.css'
 import React from "react";
 import Dropdown from "./Dropdown";
-import Form from './Form';
+import FormU from './FormU';
 import { Link } from "react-router-dom";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { useCartContext } from '../context/CartContext';
@@ -18,7 +18,7 @@ function Navbar() {
                     </button>
                     <div className="collapse navbar-collapse menu" id="navbarColor01">
                         <div>
-                            <Form name='Productos' />
+                            <FormU name='Productos' />
                             <ul className="navbar-nav me-auto justify-content-center">
                                 <li className="nav-item">
                                     <Link className="nav-link" to='/'>Home

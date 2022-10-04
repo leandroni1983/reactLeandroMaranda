@@ -18,7 +18,6 @@ function GetPerfil() {
             const dataProducts = await getDocs(data)
             dataProducts.docs.map(prod => colData.push({ ...prod.data() }))
             dataProducts.docs.map(prod => console.log(prod.data()))
-
             setData(colData)
         }
         try {

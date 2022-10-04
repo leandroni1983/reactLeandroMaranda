@@ -1,7 +1,7 @@
 import React from 'react';
 import './Nabvar.css'
 import { HiSearchCircle } from 'react-icons/hi';
-const Form = ({ name }) => {
+const FormU = ({ name }) => {
     return (
         <>
             <form className="d-flex">
@@ -15,4 +15,4 @@ const Form = ({ name }) => {
         </>
     );
 }
-export default Form;
+export default FormU;
