@@ -2,8 +2,12 @@ import React from 'react';
 import Slide from './Slide';
 import './HomeElement.css'
 const HomeElement = () => {
+
+
     return (
         <>
+
+
             <div>
                 <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
                     <div className="carousel-inner">

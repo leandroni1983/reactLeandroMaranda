@@ -4,13 +4,14 @@ import { useParams } from 'react-router-dom';
 import Loader from '../Loader/Loader';
 
 import { collection, getDocs, query, where } from "firebase/firestore";
-import { db, } from '../firebase'
+import { db } from '../firebase'
 
 const Item = () => {
     const [producto, setproducto] = useState([]);
     const { category } = useParams();
     const [isLoading, setIsLoading] = useState(true)
 
+    //Obtengo el listado de productos total o filtrado por categorias
     async function getData(category) {
         const colData = []
         const data = category ? query(collection(db, "productos"), where('category', '==', category)) : collection(db, 'productos')
@@ -20,30 +21,12 @@ const Item = () => {
         setIsLoading(false)
     }
     useEffect(() => {
-        // const colData = []
-        // if (category) {
-        //     // query(collection(db, "productos"),where('category','==',category))
-        //     getDocs(collection(db, 'productos'))
-        //         .then((collection) => {
-        //             collection.docs.map((prod) => {
-        //                 if (prod.data().category === category) { colData.push({ ...prod.data() }) }
-        //                 setproducto([...colData])
-        //                 setIsLoading(false)
-        //             })
-        //         })
+        try {
+            getData(category)
+        } catch (error) {
+            console.log('error:' + error)
+        }
 
-        // } else {
-        //     getDocs(collection(db, 'productos'))
-        //         .then((collection) => {
-        //             collection.docs.map((prod) => {
-        //                 colData.push({ ...prod.data() })
-        //                 setproducto([...colData])
-        //                 setIsLoading(false)
-        //             })
-        //         })
-
-        // }
-        getData(category)
     }, [category])
     return (
         isLoading ? <Loader /> : <ItemList producto={producto} />

@@ -8,11 +8,16 @@ import Footer from './components/Footer/Footer';
 import HomeElement from './components/HomeElement/HomeElement'
 import Carrito from './components/Cart/Carrito';
 import CartProvider from './components/context/CartContext';
+import FormLogin from './components/Login/FormLogin';
+import SignIn from './components/Login/SignIn';
+import SignUp from './components/Login/SignUp';
+import Perfil from './components/Login/Perfil';
 function App() {
 
 
   return (
     <>
+
       <CartProvider>
         <header>
           <Navbar />
@@ -20,10 +25,14 @@ function App() {
         <div className='padre'>
           <Routes>
             <Route path="/" element={<HomeElement />} />
+            <Route path="/login" element={<FormLogin />} />
+            <Route path="/signin" element={<SignIn />} />
             <Route path='/cart' element={<Carrito />} />
             <Route path="/products" element={<Item />} />
             <Route path="/category/:category" element={<Item />} />
             <Route path="/producto/:id" element={<GetProducto />} />
+            <Route path="/signup" element={<SignUp />} />
+            <Route path="/perfil" element={<Perfil />} />
           </Routes>
         </div>
         <Footer />

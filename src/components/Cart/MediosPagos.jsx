@@ -4,20 +4,21 @@ import { addDoc, collection } from "firebase/firestore";
 import { db } from '../firebase';
 import swal from 'sweetalert';
 import { useNavigate } from 'react-router-dom';
-
+import { useAuth } from '../context/AuthContext';
 const MediosPagos = () => {
     const { carro, totalPrice, clearCarro } = useCartContext()
     const [buyer, setbuyer] = useState({})
     const navigate = useNavigate()
-    const [orderId, setOrderId] = useState()
+    const { user } = useAuth()
+    console.log(user)
+
 
     const compraAlerta = (text, title, icon) => {
         swal({
             title: `${title}`,
-            // text: `${buyer.nombre} tu compra id: ${prop} se realizo con exito`,
             text: `${text}`,
             icon: `${icon}`,
-            button: 'Aceptar'
+            button: 'Aceptar',
         })
     }
 
@@ -32,21 +33,26 @@ const MediosPagos = () => {
         } else {
             addDataToBdd()
             clearCarro()
-            navigate('/')
+            navigate('/products')
         }
     }
 
     const addDataToBdd = async () => {
-        console.log('enviando datos a base')
+        let accountMail = ''
+        if (user) {
+            accountMail = user.mail
+        } else {
+            accountMail = 'invitado'
+        }
         const order = await addDoc(collection(db, "ordenes"), {
+            accountMail,
             buyer,
             precioTotal: `$${totalPrice()}`,
             fecha: new Date(),
             items: carro.map(prod => { return { 'cantidad': prod.cantidad, 'id': prod.id, 'title': prod.title, 'precio': prod.precio } })
 
         });
-        //setOrderId(order.id)
-        //console.log(orderId)
+
         compraAlerta(`${buyer.nombre} tu compra fue realizada con exito id: ${order.id}`, 'Compra realizada con exito', 'success')
 
     }

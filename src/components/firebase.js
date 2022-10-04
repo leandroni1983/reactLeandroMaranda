@@ -1,7 +1,8 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getFirestore} from "firebase/firestore";
 
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
+import { getAuth } from "firebase/auth";
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
   authDomain: "flawless-energy-357723.firebaseapp.com",
@@ -14,7 +15,9 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const db = getFirestore()
+const db = getFirestore();
+const auth = getAuth(app);
 
 
-export {db,app}
+export {db,app,auth};
+

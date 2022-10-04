@@ -1,5 +1,4 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-
 export const CartContext = createContext()
 export const useCartContext = () => useContext(CartContext);
 
@@ -7,7 +6,6 @@ function CartProvider({ children }) {
     const [carro, setCarro] = useState([])
     const [tocarrito, setTocarrito] = useState(true)
     const [estadoCarro, setEstadoCarro] = useState(true)
-
 
     const addProduct = (count, producto) => {
         const foundProduct = carro.find((item) => item.id === producto.id)

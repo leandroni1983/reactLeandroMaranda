@@ -1,17 +1,17 @@
-import React, { useEffect } from "react";
-import Dropdown from "./Dropdown";
-import Form from "./Form";
-import { Link } from "react-router-dom";
 import './Nabvar.css'
+import React from "react";
+import Dropdown from "./Dropdown";
+import Form from './Form';
+import { Link } from "react-router-dom";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { useCartContext } from '../context/CartContext';
+import { useAuth } from '../context/AuthContext';
 function Navbar() {
     const { getTotalProds, tocarrito } = useCartContext();
-
+    const { isLoged } = useAuth()
     return (
         <>
             <nav className='navbar navbar-expand-lg navbar-dark bg-primary padre'>
-                {/* //<Link className="dropdown-item" to="/">Todo</Link> */}
                 <div className="container-fluid">
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon" />
@@ -26,7 +26,10 @@ function Navbar() {
                                     </Link>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#">Features</a>
+                                    {isLoged
+                                        ? <Link className="nav-link" to='/perfil' style={{ color: " white", textDecoration: 'none' }}>Perfil</Link>
+                                        : <Link className="nav-link" to='/signin' style={{ color: " white", textDecoration: 'none' }}>Logeate</Link>
+                                    }
                                 </li>
                                 <li className="nav-item">
                                     <a className="nav-link" href="#">Pricing</a>
