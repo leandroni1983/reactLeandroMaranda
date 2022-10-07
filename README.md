@@ -13,12 +13,9 @@
 
 
 
-
-
-
-
-
-
+## <em>Back End</em>
+### Firebase
+####  https://firebase.google.com/docs/firestore/manage-data/structure-data?hl=es-419
 
 
 
