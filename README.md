@@ -1,4 +1,15 @@
-<em> Carrito de compras con React y Firebase</em>
+# <em>Carrito de compras con React y Firebase</em>
+
+## <em>Librerias Utilizadas en Front End</em>
+
+### sweetalert2
+#### https://github.com/sweetalert2/sweetalert2
+
+### react-spinners
+#### https://github.com/davidhu2000/react-spinners
+
+### bootswatch
+#### https://github.com/thomaspark/bootswatch/
 
 
 
@@ -12,7 +23,7 @@
 
 
 
-# Getting Started with Create React App
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
