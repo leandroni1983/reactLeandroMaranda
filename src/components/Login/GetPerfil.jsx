@@ -3,14 +3,9 @@ import { useAuth } from '../context/AuthContext';
 import Card from './Card';
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from '../firebase';
-import { useNavigate } from 'react-router-dom';
-
-
 function GetPerfil() {
-
     const { user, logOut } = useAuth()
     const [items, setitems] = useState([])
-    const navigate = useNavigate();
 
     useEffect(() => {
         async function getData(mail) {

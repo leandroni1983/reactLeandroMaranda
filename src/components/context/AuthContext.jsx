@@ -20,6 +20,7 @@ function AuthProvider({ children }) {
     const [user, setUser] = useState(null)
     const [error, setError] = useState()
     const [isLoged, setIsLoged] = useState(false)
+
     const signup = (mail, password) => {
         setError('')
         createUserWithEmailAndPassword(auth, mail, password)
@@ -28,7 +29,7 @@ function AuthProvider({ children }) {
             })
             .catch((error) => {
                 if (error.code === 'auth/internal-error')
-                    setError("corrobore su E-Mail")
+                    setError("corrobore su E-Mail / Password")
                 else if (error.code === 'auth/weak-password')
                     setError("contraseña debe contener al menos 6 caracteres")
                 else {
