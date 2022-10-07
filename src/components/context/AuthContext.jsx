@@ -1,7 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from 'react'
 import { auth } from '../firebase';
 import { useNavigate } from 'react-router-dom';
-
 import {
     createUserWithEmailAndPassword,
     signInWithEmailAndPassword,
@@ -10,7 +9,6 @@ import {
     GoogleAuthProvider,
     signInWithPopup,
 } from 'firebase/auth';
-
 export const authContext = createContext()
 export const useAuth = () => {
     const context = useContext(authContext);
@@ -57,6 +55,7 @@ function AuthProvider({ children }) {
     const logOut = () => {
         signOut(auth)
         setIsLoged(false)
+        navigate('/')
     }
 
     useEffect(() => {

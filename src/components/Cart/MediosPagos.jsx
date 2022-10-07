@@ -10,7 +10,6 @@ const MediosPagos = () => {
     const [buyer, setbuyer] = useState({})
     const navigate = useNavigate()
     const { user } = useAuth()
-    console.log(user)
 
 
     const compraAlerta = (text, title, icon) => {
@@ -38,12 +37,7 @@ const MediosPagos = () => {
     }
 
     const addDataToBdd = async () => {
-        let accountMail = ''
-        if (user) {
-            accountMail = user.mail
-        } else {
-            accountMail = 'invitado'
-        }
+        let accountMail = user.email
         const order = await addDoc(collection(db, "ordenes"), {
             accountMail,
             buyer,
