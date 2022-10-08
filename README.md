@@ -1,15 +1,16 @@
 # <em>Carrito de compras con React y Firebase</em>
 
->Este repositorio contiene el desafio final  para el curso de React de CoderHouse.
+>Este repositorio contiene el desafio final  para el curso de React de CoderHouse, Comisión 34715.
 
->Comisión 34715
 >Profesor Francisco Pugh
 >Alumno Leandro Maranda
 
-El mismo es una plataforma E-Commerce 
+Plataforma E-Commerce 
 Se realizaron las primeras pruebas de front end utilizando de back end  FakeStoreApi
 para luego migrar todos los datos del producto a Firebase y tambien uttilizar 
 Firebase Authentication para logearnos
+
+[Mira la Pagina aqui](https://reacttiendacoder.vercel.app/)
 
 ## <em>Librerias Utilizadas en Front End</em>
 
