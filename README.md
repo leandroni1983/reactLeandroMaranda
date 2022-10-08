@@ -25,12 +25,10 @@ Firebase Authentication para logearnos
 
 ## <em>Back End - Firebase -  FakeApi</em>
 
-
-### FakeStoreApi
-#### https://fakestoreapi.com/
+### FakeStoreApi [**fakestoreapi**](https://fakestoreapi.com/)
 
 ### Firebase y Firebase Auth para logeo con cuentas de mail y gmail
-####  https://firebase.google.com/docs/firestore/manage-data/structure-data?hl=es-419
+[**Docs Firebase**](https://firebase.google.com/docs/firestore/manage-data/structure-data?hl=es-419)
 
 
 
