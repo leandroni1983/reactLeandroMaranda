@@ -19,6 +19,9 @@ Firebase Authentication para logearnos
 
 ![checkout](https://github.com/leandroni1983/reactLeandroMaranda/blob/master/public/assets/images/readme/checkout.JPG)
 
+![productos](https://github.com/leandroni1983/reactLeandroMaranda/blob/master/public/assets/images/readme/productos.JPG)
+
+
 
 
 
@@ -31,8 +34,6 @@ Firebase Authentication para logearnos
 ### react-spinners [**Docs react-spinners**](https://github.com/davidhu2000/react-spinners2)
 
 ### bootswatch [**Docs bootswatch**](https://github.com/thomaspark/bootswatch/)
-
-### Formik [**Docs Formik**](https://formik.org/docs/overview)
 
 ### React [**Docs React**](https://reactjs.org/docs/getting-started.html)
 
