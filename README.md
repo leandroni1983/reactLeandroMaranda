@@ -14,6 +14,10 @@ Firebase Authentication para logearnos
 
 ## <em>Librerias Utilizadas en Front End</em>
 
+## [**sweetalert2**](https://github.com/sweetalert2/sweetalert2){:target="_blank"}
+## [**react-spinners**](https://github.com/davidhu2000/react-spinners2){:target="_blank"}
+## [**bootswatch**](hhttps://github.com/thomaspark/bootswatch/){:target="_blank"}
+
 ### sweetalert2
 #### https://github.com/sweetalert2/sweetalert2
 
