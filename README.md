@@ -24,9 +24,6 @@ Firebase Authentication para logearnos
 
 
 
-
-
-
 ## <em>Librerias Utilizadas en Front End</em>
 
 ### sweetalert2 [**Docs sweetalert2**](https://github.com/sweetalert2/sweetalert2)

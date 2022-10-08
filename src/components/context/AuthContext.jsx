@@ -21,11 +21,13 @@ function AuthProvider({ children }) {
     const [error, setError] = useState()
     const [isLoged, setIsLoged] = useState(false)
 
+
+    // creo usuario con mail y password en firebase
     const signup = (mail, password) => {
         setError('')
         createUserWithEmailAndPassword(auth, mail, password)
             .then(() => {
-                navigate('/login')
+                navigate('/')
             })
             .catch((error) => {
                 if (error.code === 'auth/internal-error')
@@ -38,6 +40,7 @@ function AuthProvider({ children }) {
             })
     }
 
+    // login con mail y password
     const signin = (mail, password) => {
         setError('')
         signInWithEmailAndPassword(auth, mail, password)
@@ -53,6 +56,7 @@ function AuthProvider({ children }) {
             )
     }
 
+    // deslogeo y navego al home /
     const logOut = () => {
         signOut(auth)
         setIsLoged(false)
@@ -65,11 +69,11 @@ function AuthProvider({ children }) {
         })
     }, []);
 
+    // login google fireauth creo el objeto google provider y me logeo mediante signInWithPopup
     const loginGoogle = () => {
         const googleProvider = new GoogleAuthProvider();
         signInWithPopup(auth, googleProvider)
-            .then((result) => {
-                // const credential = GoogleAuthProvider.credentialFromResult(result);
+            .then(() => {
                 setIsLoged(true)
                 navigate('/')
             })
