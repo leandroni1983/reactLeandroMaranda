@@ -14,18 +14,13 @@ Firebase Authentication para logearnos
 
 ## <em>Librerias Utilizadas en Front End</em>
 
+### sweetalert2 [**Docs sweetalert2**](https://github.com/sweetalert2/sweetalert2)
 
-### sweetalert2
-[**Docs sweetalert2**](https://github.com/sweetalert2/sweetalert2)
+### react-spinners [**Docs react-spinners**](https://github.com/davidhu2000/react-spinners2)
 
-### react-spinners
-[**Docs react-spinners**](https://github.com/davidhu2000/react-spinners2)
+### bootswatch [**Docs bootswatch**](https://github.com/thomaspark/bootswatch/)
 
-### bootswatch
-[**Docs bootswatch**](https://github.com/thomaspark/bootswatch/)
-
-### React 
-[**Docs React**](https://reactjs.org/docs/getting-started.html)
+### React [**Docs React**](https://reactjs.org/docs/getting-started.html)
 
 
 ## <em>Back End - Firebase -  FakeApi</em>
