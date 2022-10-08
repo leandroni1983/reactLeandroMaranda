@@ -14,7 +14,12 @@ Firebase Authentication para logearnos
 [Navega la Pagina](https://reacttiendacoder.vercel.app/)
 
 
-![login](https://github.com/leandroni1983/reactLeandroMaranda/blob/master/public/assets/images/readme/login.JPG){width='100px'}
+![login](https://github.com/leandroni1983/reactLeandroMaranda/blob/master/public/assets/images/readme/login.JPG)
+
+
+![checkout](https://github.com/leandroni1983/reactLeandroMaranda/blob/master/public/assets/images/readme/checkout.JPG)
+
+
 
 
 
