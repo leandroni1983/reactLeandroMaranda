@@ -1,8 +1,9 @@
 # <em>Carrito de compras con React y Firebase</em>
 
->Este repositorio contiene el desafio final  para el curso de React de CoderHouse, Comisión 34715.
-
->Profesor Francisco Pugh
+>Este repositorio contiene el desafio final  para el curso de React de CoderHouse, Comisión 34715.  
+>
+>Profesor Francisco Pugh  
+>
 >Alumno Leandro Maranda
 
 Plataforma E-Commerce 
@@ -10,7 +11,13 @@ Se realizaron las primeras pruebas de front end utilizando de back end  FakeStor
 para luego migrar todos los datos del producto a Firebase y tambien uttilizar 
 Firebase Authentication para logearnos
 
-[Mira la Pagina aqui](https://reacttiendacoder.vercel.app/)
+[Navega la Pagina](https://reacttiendacoder.vercel.app/)
+
+
+![login](https://github.com/leandroni1983/reactLeandroMaranda/blob/master/public/assets/images/readme/login.JPG){width='100px'}
+
+
+
 
 ## <em>Librerias Utilizadas en Front End</em>
 
@@ -20,6 +27,8 @@ Firebase Authentication para logearnos
 
 ### bootswatch [**Docs bootswatch**](https://github.com/thomaspark/bootswatch/)
 
+### Formik [**Docs Formik**](https://formik.org/docs/overview)
+
 ### React [**Docs React**](https://reactjs.org/docs/getting-started.html)
 
 
@@ -27,8 +36,7 @@ Firebase Authentication para logearnos
 
 ### FakeStoreApi [**fakestoreapi**](https://fakestoreapi.com/)
 
-### Firebase y Firebase Auth para logeo con cuentas de mail y gmail
-[**Docs Firebase**](https://firebase.google.com/docs/firestore/manage-data/structure-data?hl=es-419)
+### Firebase y Firebase Auth para logeo con cuentas de mail y gmailp[**Docs Firebase**](https://firebase.google.com/docs/firestore/manage-data/structure-data?hl=es-419)
 
 
 
