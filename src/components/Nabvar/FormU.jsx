@@ -1,17 +1,20 @@
 import React from 'react';
 import './Nabvar.css'
 import { HiSearchCircle } from 'react-icons/hi';
-const FormU = ({ name }) => {
+const FormU = () => {
     return (
         <>
-            <form className="d-flex">
-                <div className="input-group input-group-sm mb-3">
-                    <input type="text" style={{ width: '500px' }} className="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder='Buscar Productos, Marcas y mas ...' />
-                    <div className="input-group-prepend">
-                        <span className="input-group-text" id="inputGroup-sizing-sm"> <HiSearchCircle className='lupa' /></span>
+
+            <form action="" className='d-flex'>
+                <div class="input-group mb-3">
+                    <input style={{ width: '400px' }} type="text" class="form-control" placeholder='Buscar Productos, Marcas y mas ...' aria-label="Username" aria-describedby="basic-addon1" />
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1"> <HiSearchCircle className='lupa' /></span>
                     </div>
                 </div>
             </form>
+
+
         </>
     );
 }
